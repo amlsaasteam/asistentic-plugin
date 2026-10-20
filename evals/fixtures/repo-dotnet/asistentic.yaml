@@ -1,0 +1,13 @@
+proyecto: lotobet
+componente: api
+depende_de: []
+stack: dotnet
+motor_datos: [sqlserver]
+verificacion:
+  comando: echo "tests simulados: 12 pasaron, 0 fallaron"
+tablas_transaccionales:
+  - nombre: ventas
+    clave_particion: fecha_venta
+    dias_caliente: 90
+    dias_tibio: 730
+    anios_retencion: 7

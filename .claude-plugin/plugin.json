@@ -1,0 +1,8 @@
+{
+  "name": "asistentic",
+  "description": "Ciclo de desarrollo Asistentic de punta a punta: onboard-repo, pipeline, spec, tareas, implementar (agente desarrollador), desarrollar, revisar (6 agentes con umbral de confianza), validar-qa, release, verificar-release, rollback (agente devops), fix, postmortem, revisar-claude-md; reglas de desarrollo, devops, por stack y por motor (SQL Server, Oracle, Aurora, MongoDB); hooks de bloqueo y verificación; evals",
+  "version": "0.4.1",
+  "author": {
+    "name": "Asistentic"
+  }
+}

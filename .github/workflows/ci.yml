@@ -1,0 +1,19 @@
+name: Plugin Asistentic — CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y jq
+      - name: Instalar Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validar manifiesto
+        run: claude plugin validate .
+      - name: Probar hooks
+        run: bash evals/hooks/probar-hooks.sh
+  # Los evals con modelo se corren a mano antes de publicar una versión:
+  #   claude plugin eval . --scaffold --trust-plugin --runs 1 --max-cost-usd 3
